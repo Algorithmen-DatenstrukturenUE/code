@@ -68,6 +68,48 @@ public class Ab1Impl implements Ab1 {
 			}
 			mergesort(left);
 			mergesort(right);
+
+			merge(data, left, right);
+		}
+		else return;
+		}
+
+	private void merge(int[] data, int[] left, int[] right){
+
+		int indexL=0;
+		int indexR=0;
+		int indexFinal=0;
+
+		/*
+		as long as the both sides (arrays) are not empty
+		check if the value in the left array is smaller or equal to the one in the right array
+		if yes, store value of left array in data array
+		if no, store value of right array in data array
+		 */
+
+		while (indexL<left.length && indexR<right.length){
+			if(left[indexL]<=right[indexR]){
+				data[indexFinal]=left[indexL];
+				indexFinal++;
+				indexL++;
+			}
+			else{
+				data[indexFinal]=right[indexR];
+				indexFinal++;
+				indexR++;
+			}
+		}
+
+		while (indexL<left.length){
+			data[indexFinal]=left[indexL];
+			indexFinal++;
+			indexL++;
+		}
+
+		while (indexR<right.length){
+			data[indexFinal]=right[indexR];
+			indexFinal++;
+			indexR++;
 		}
 
 	}
