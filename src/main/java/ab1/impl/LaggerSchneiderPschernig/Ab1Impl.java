@@ -1,4 +1,4 @@
-package ab1.impl.Nachnamen;
+package ab1.impl.LaggerSchneiderPschernig;
 
 import ab1.Ab1;
 
@@ -22,13 +22,18 @@ public class Ab1Impl implements Ab1 {
 
 	@Override
 	public ListNode insert(ListNode head, int value) {
-		// YOUR CODE HERE
-		return null;
+
+
+
+
+		return head;
 	}
 
 	@Override
 	public ListNode search(ListNode head, int value) {
-		// YOUR CODE HERE
+
+
+
 		return null;
 	}
 
@@ -71,6 +76,11 @@ public class Ab1Impl implements Ab1 {
 
 			merge(data, left, right);
 		}
+		/*
+		if the array length is less than 2,
+		there is no sorting necessary
+		and it will just return the array
+		 */
 		else return;
 		}
 
